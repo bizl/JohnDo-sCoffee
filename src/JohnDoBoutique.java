@@ -20,13 +20,13 @@ public class JohnDoBoutique {
         	try{
 	        	whatUserEntered = sc.nextInt(); 
 	        	if(menuWizard.ReachedEnd()) 
-	        	{
-	        		 
-	        		System.out.printf("\nTotal £%.2f\n\n", Pricing.GetCostFromMenus(menuWizard));
+	        	{  
+	        		System.out.printf("\nTotal price: £%.2f\n\n\n", Pricing.GetCostFromMenus(menuWizard));
 	        		menuWizard = new MenuWizard();
 	        		whatUserEntered = 0;
 	        	}
-	        	menuWizard.ShowNextMenu(whatUserEntered);
+	        	else 
+	        		menuWizard.ShowNextMenu(whatUserEntered);
 	        	
         	}
         	catch(Exception ex)
